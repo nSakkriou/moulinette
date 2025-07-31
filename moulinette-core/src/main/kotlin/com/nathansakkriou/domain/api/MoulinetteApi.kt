@@ -14,10 +14,17 @@ interface MoulinetteApi {
 
 interface ProcessorConfig: CanChoicePersistanceImpl {
     fun with(name: String, author: String, action: MoulinetteAction): MoulinetteDeclaration
+    fun with(vararg moulinetteInBuild: MoulinetteInBuild): MoulinetteDeclaration
+}
+
+interface EndMoulinetteDeclaration {
+    fun with(name: String, author: String, action: MoulinetteAction): MoulinetteDeclaration
+    fun with(vararg moulinetteInBuild: MoulinetteInBuild): MoulinetteDeclaration
 }
 
 interface MoulinetteDeclaration : CanBeParameterize, CanBuild {
     fun andWith(name: String, author: String, action: MoulinetteAction): MoulinetteDeclaration
+    fun andWith(vararg moulinetteInBuild: MoulinetteInBuild): MoulinetteDeclaration
 }
 
 // ----

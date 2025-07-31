@@ -1,6 +1,7 @@
 package com.nathansakkriou.domain
 
 import com.nathansakkriou.domain.api.MoulinetteApi
+import com.nathansakkriou.domain.api.MoulinetteInBuild
 import com.nathansakkriou.domain.persist.PersistInMemory
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
